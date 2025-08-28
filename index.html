@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="heading">Multi Converter</h1>
+
+    <!-- Buttons to choose converter -->
+    <div class="buttons">
+        <button onclick="showConverter('temperature')">Temperature</button>
+        <button onclick="showConverter('distance')">Distance</button>
+        <button onclick="showConverter('weight')">Weight</button>
+        <button onclick="showConverter('time')">Time</button>
+    </div>
+
+    <!-- Temperature Converter -->
+    <div id="temperature" class="converter">
+        <h2>Temperature Converter</h2>
+        <div class="temp-container">
+            <label for="celsius">Celsius:</label>
+            <input onchange="computeTemp(event)" type="number" id="celsius" name="celsius" placeholder="Enter Temperature" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input onchange="computeTemp(event)" type="number" id="fahrenheit" name="fahrenheit" placeholder="Enter Temperature" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="kelvin">Kelvin:</label>
+            <input onchange="computeTemp(event)" type="number" id="kelvin" name="kelvin" placeholder="Enter Temperature" class="input">
+        </div>
+    </div>
+
+    <!-- Distance Converter -->
+    <div id="distance" class="converter" style="display:none;">
+        <h2>Distance Converter</h2>
+        <div class="temp-container">
+            <label for="km">Kilometers:</label>
+            <input onchange="computeDistance(event)" type="number" id="km" name="km" placeholder="Enter Distance" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="miles">Miles:</label>
+            <input onchange="computeDistance(event)" type="number" id="miles" name="miles" placeholder="Enter Distance" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="meters">Meters:</label>
+            <input onchange="computeDistance(event)" type="number" id="meters" name="meters" placeholder="Enter Distance" class="input">
+        </div>
+    </div>
+
+    <!-- Weight Converter -->
+    <div id="weight" class="converter" style="display:none;">
+        <h2>Weight Converter</h2>
+        <div class="temp-container">
+            <label for="kg">Kilograms:</label>
+            <input onchange="computeWeight(event)" type="number" id="kg" name="kg" placeholder="Enter Weight" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="grams">Grams:</label>
+            <input onchange="computeWeight(event)" type="number" id="grams" name="grams" placeholder="Enter Weight" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="lbs">Pounds:</label>
+            <input onchange="computeWeight(event)" type="number" id="lbs" name="lbs" placeholder="Enter Weight" class="input">
+        </div>
+    </div>
+
+    <!-- Time Converter -->
+    <div id="time" class="converter" style="display:none;">
+        <h2>Time Converter</h2>
+        <div class="temp-container">
+            <label for="sec">Secondes:</label>
+            <input onchange="computeTime(event)" type="number" id="sec" name="sec" placeholder="Enter time" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="min">Minutes:</label>
+            <input onchange="computeTime(event)" type="number" id="min" name="min" placeholder="Enter time" class="input">
+        </div>
+        <div class="temp-container">
+            <label for="hours">Hours:</label>
+            <input onchange="computeTime(event)" type="number" id="hours" name="hours" placeholder="Enter time" class="input">
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
